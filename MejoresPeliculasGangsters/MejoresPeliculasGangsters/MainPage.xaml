@@ -1,0 +1,222 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="MejoresPeliculasGangsters.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+    <phone:PhoneApplicationPage.Resources>
+        <Style x:Key="subtitulo" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="21.333"/>
+            <Setter Property="Foreground" Value="#FF8F8F8F"/>
+        </Style>
+    </phone:PhoneApplicationPage.Resources>
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar Mode="Default" IsVisible="True">
+			<shell:ApplicationBarIconButton x:Name="iconMenu" IconUri="/Assets/AppBar/appbar.transport.rew.rest.png" Text="Menu" Click="iconMenu_Click"/>
+			<shell:ApplicationBarIconButton x:Name="iconContacto" IconUri="/Assets/AppBar/appbar.feature.email.rest.png" Text="contacto" Click="iconContacto_Click"/>
+			<shell:ApplicationBarIconButton x:Name="iconAcercaDe" IconUri="/Assets/AppBar/appbar.favs.rest.png" Text="Valorar" Click="iconAcercaDe_Click"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <!--Pivot Control-->
+        <controls:Pivot x:Name="controlPivot" Title="Mejores Peliculas de Gangsters" LoadingPivotItem="controlPivot_LoadingPivotItem" Background="#B2000000">
+            <controls:PivotItem Header="Menu" Background="#B2000000">
+                <ListBox HorizontalAlignment="Stretch" HorizontalContentAlignment="Stretch" Height="607" VerticalAlignment="Top" Width="456">
+                    <TextBlock x:Name="elPadrino" TextWrapping="Wrap" FontSize="36" Margin="0,15,0,0" Tap="elPadrino_Tap">
+                    	<Run Text="The "/>
+                    	<Run Text="G"/>
+                    	<Run Text="odfather"/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="El Padrino" FontSize="21.333" Style="{StaticResource subtitulo}"/>
+                    <TextBlock x:Name="eraseUnaVez" TextWrapping="Wrap" FontSize="36" Margin="0,15,0,0" Tap="eraseUnaVez_Tap">
+                    	<Run Text="Once upon a time"/>
+                    	<Run Text="..."/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" FontSize="21.333" Style="{StaticResource subtitulo}">
+                    	<Run Text="Erase una vez en Am"/>
+                    	<Run Text="e"/>
+                    	<Run Text="rica"/>
+                    </TextBlock>
+                    <TextBlock x:Name="scarface" TextWrapping="Wrap" Text="Scarface" FontSize="36" Margin="0,15,0,0" Tap="scarface_Tap"/>
+                    <TextBlock TextWrapping="Wrap" Text="Caracortada" FontSize="21.333" Style="{StaticResource subtitulo}"/>
+                    <TextBlock x:Name="ciudadDios" TextWrapping="Wrap" Text="Cidade de Deus" FontSize="36" Margin="0,15,0,0" Tap="ciudadDios_Tap"/>
+                    <TextBlock TextWrapping="Wrap" Text="Ciudad de Dios" FontSize="21.333" Style="{StaticResource subtitulo}"/>
+                    <TextBlock x:Name="carlitos" TextWrapping="Wrap" Text="Carlito's Way" FontSize="36" Margin="0,15,0,0" Tap="carlitos_Tap"/>
+                    <TextBlock TextWrapping="Wrap" FontSize="21.333" Style="{StaticResource subtitulo}" Text="Atrapado por su pasado"/>
+                    <TextBlock x:Name="goodFellas" TextWrapping="Wrap" FontSize="36" Margin="0,15,0,0" Tap="goodFellas_Tap">
+                    	<Run Text="Goo"/>
+                    	<Run Text="dfella"/>
+                    	<Run Text="s"/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Buenos muchachos" FontSize="21.333" Style="{StaticResource subtitulo}"/>
+                </ListBox>
+                <!--Double line list with text wrapping-->
+            </controls:PivotItem>
+
+            <!--Pivot item two-->
+            <controls:PivotItem Header="El Padrino" Background="#B2000000">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SecondListBox" Margin="0,0,-12,0" Padding="5,0">
+                    <TextBlock TextWrapping="Wrap" Text="Sinopsis" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Don Vito Corleone es el jefe de una de las cinco familias que ejercen el mando de la Cosa Nostra en Nueva York en los años 40. Don Corleone tiene cuatro hijos; una chica, Connie, y tres varones, Santino, o Sonny, como le gusta que le llamen, Michael y Freddie, al que enviaran exiliado a Las Vegas, dada su incapacidad para asumir puestos de mando en la Cuando otro capo, Sollozzo, al rechazar el Padrino intervenir en el negocio de estupefacientes, intenta asesinar a éste, empieza una cruenta lucha de violentos episodios entre los distintos grupos."/>
+                    <TextBlock TextWrapping="Wrap" Text="Ficha Tecnica" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+                    	<Run Text="Género:&#x9;Policial, Drama"/>
+                    	<LineBreak/>
+                    	<Run Text="Título Original: The Godfather"/>
+                    	<LineBreak/>
+                    	<Run Text="Director: Francis Ford Coppola"/>
+                    	<LineBreak/>
+                    	<Run Text="Año de producción: 1972"/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+                    	<Run Text="Al Pacino, Diane Keaton, Marlon Brando, Robert Duvall, James Caan, Talia Shire, John Cazale, Sterling Hayden, Rudy Bond, Al Lettieri, Abe Vigoda, Gianni Russo, Richard Castellano, Richard Conte, Franco Citti, John Marley"/>
+                    	<LineBreak/>
+                    	<Run/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Trailer" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Link al Trailar "/>
+
+                </ListBox>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Once upon..." Background="#B2000000">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SecondListBox1" Margin="0,0,-12,0" Padding="5,0">
+                    <TextBlock TextWrapping="Wrap" Text="Sinopsis" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+            			<Run Text="David Aaronson, Noodles, un pobre chaval judío, conoce en los suburbios de Manhattan de principio del siglo XX a Max, otro joven de origen hebreo dispuesto a llegar lejos por cualquier método. Ambos entablan una gran amistad y forman, junto a otros colegas, una banda que prospera rápidamente, llegando a convertirse, en tiempos de la prohibición, en unos importantes mafiosos..."/>
+            			<LineBreak/>
+            			<Run/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Ficha Tecnica" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+            			<Run Text="Género:&#x9;Policial, Drama"/>
+            			<LineBreak/>
+            			<Run Text="Título Original: Once Upon a Time in America"/>
+            			<LineBreak/>
+            			<Run Text="Director: Sergio Leone"/>
+            			<LineBreak/>
+            			<Run Text="Año de producción: 1984"/>
+            			<LineBreak/>
+            			<Run/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+            			<Run Text="Protagonistas: Robert De Niro, Jennifer Connelly, Joe Pesci, James Woods, Danny Aiello, Burt Young, James Russo, Rusty Jacobs, Darlanne Fluegel, Julie Cohen, Elizabeth McGovern, Clem Caserta, Scott Tiler, Treat Williams, Larry Rapp, Amy Ryder, Tuesday Weld, James Hayden, William Forsythe"/>
+            			<LineBreak/>
+            			<Run/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Trailer" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Link al Trailar "/>
+
+                </ListBox>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Scarface" Background="#B2000000">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SecondListBox2" Margin="0,0,-12,0" Padding="5,0">
+                    <TextBlock TextWrapping="Wrap" Text="Sinopsis" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Re estreno. En mayo de 1980, Fidel Castro abrió el paso marítimo de Mariel, Cuba, con la intención de que alguna de su gente se reuniera con sus familiares en los Estados Unidos. Muchos de los 125,000 que llegaron a la Florida era gente honesta y trabajadora que bregaba por una nueva vida en una tierra libre. Pero no todos. Castro vio la oportunidad embarcar también a criminales de sus cárceles quienes también veían a norteamérica como la tierra de las oportunidades. Entre los más ambiciosos estaba Tony Montana, también llamado Caracortada... Scarface, quien junto a su amigo, Manny Rivera, llegaron para realizar el sueño americano. Es en Miami donde iniciarán una escalofriante carrera delictiva con el objetivo de ascender a la cúpula de una organización de narcos."/>
+                    <TextBlock TextWrapping="Wrap" Text="Ficha Tecnica" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+            			<Run Text="Género:&#x9;Policial, Drama, Suspenso"/>
+            			<LineBreak/>
+            			<Run Text="Título Original: Scarface"/>
+            			<LineBreak/>
+            			<Run Text="Director: Brian De Palma"/>
+            			<LineBreak/>
+            			<Run Text="Año de producción: 1983"/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas: Al Pacino, Michelle Pfeiffer, Mary Elizabeth Mastrantonio, F. Murray Abraham, Steven Bauer, Robert Loggia, Harris Yulin"/>
+                    <TextBlock TextWrapping="Wrap" Text="Trailer" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Link al Trailar "/>
+
+                </ListBox>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Cidade de..." Background="#B2000000">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SecondListBox5" Margin="0,0,-12,0" Padding="5,0">
+                    <TextBlock TextWrapping="Wrap" Text="Sinopsis" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Ciudad de Dios narra la vida de un puñado de jóvenes, entre finales de los años sesenta y principios de los ochenta, en un suburbio de Río de Janeiro. El protagonista/narrador es Buscapé, un adolescente, partícipe y testigo del cambio, en las formas y en el contenido, de la vida de su barrio. A través de sus ojos vemos las expectativas de niños cuya única salida a sus frustraciones es lidiar con la violencia de las bandas y las instituciones policiales presentes en su barrio."/>
+                    <TextBlock TextWrapping="Wrap" Text="Ficha Tecnica" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+            			<Run Text="Género: Policial, Drama, Suspenso"/>
+            			<LineBreak/>
+            			<Run Text="Título Original: Cidade de Deus"/>
+            			<LineBreak/>
+            			<Run Text="Director: Kátia Lund, Fernando Meirelles"/>
+            			<LineBreak/>
+            			<Run Text="Año de producción: 2002"/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas: Matheus Nachtergaele, Alice Braga, Seu Jorge, Leandro Firmino, Douglas Silva, Phellipe Haagensen, Alexandre Rodrigues, Jonathan Haagensen"/>
+                    <TextBlock TextWrapping="Wrap" Text="Trailer" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Link al Trailar "/>
+
+                </ListBox>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Carlito's Way" Background="#B2000000">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SecondListBox4" Margin="0,0,-12,0" Padding="5,0">
+                    <TextBlock TextWrapping="Wrap" Text="Sinopsis" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Carlitos Brigante salió de la carcel y no quiere saber nada con volver a ella, ni a las andadas , solo juntar dinero para retirarse y vivir honradamente, pero el destino es otra cosa ( Borges decia: &quot;La puerta elige y no el hombre&quot;) , y el diablo mete la cola. Violencia a ultranza en una de las mejores películas de Brian De Palma, en la línea de su anterior: &quot;Caracortada&quot;. Inmejorable título en la línea total de este realizador"/>
+                    <TextBlock TextWrapping="Wrap" Text="Ficha Tecnica" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+                    	<Run Text="Género: Aventura, Policial, Drama"/>
+                    	<LineBreak/>
+                    	<Run Text="Título Original: Carlito's Way"/>
+                    	<LineBreak/>
+                    	<Run Text="Director: Brian De Palma"/>
+                    	<LineBreak/>
+                    	<Run Text="Año de producción: 1993"/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas: Al Pacino, Sean Penn, John Leguizamo, Luis Guzmán, Penelope Ann Miller, Jorge Porcel, Joseph Siravo"/>
+                    <TextBlock TextWrapping="Wrap" Text="Trailer" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Link al Trailar "/>
+
+                </ListBox>
+            </controls:PivotItem>
+            <controls:PivotItem Header="Goodfellas" Background="#B2000000">
+                <!--Triple line list no text wrapping-->
+                <ListBox x:Name="SecondListBox3" Margin="0,0,-12,0" Padding="5,0">
+                    <TextBlock TextWrapping="Wrap" Text="Sinopsis" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Henry Hill, hijo de padre irlandés y madre siciliana, es testigo de la vida de poder, honor y respeto que llevan los gangsters que habitan en su barrio, en una zona de Brooklyn donde son mayoría emigrantes, bajo la protección de Paul Cicero. Henry, a sus trece años de edad, desistirá de seguir yendo a clase, y fascinado por tal vida mafiosa, entrará a formar parte de la organización, comenzando por ser un mero chico de los recados para ir ascendiendo de posición a medida que fortalece la confianza que en él depositan los integrantes del hampa local, como el irlandés Jimmy Conway o el italoamericano Tommy de Vito, adentrándose cada vez en negocios más turbios."/>
+                    <TextBlock TextWrapping="Wrap" Text="Ficha Tecnica" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap">
+            			<Run Text="Género: Biográfico, Policial, Drama"/>
+            			<LineBreak/>
+            			<Run Text="Título Original: Goodfellas"/>
+            			<LineBreak/>
+            			<Run Text="Director: Martin Scorsese"/>
+            			<LineBreak/>
+            			<Run Text="Año de producción: 1990"/>
+            			<LineBreak/>
+            			<Run/>
+                    </TextBlock>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Protagonistas: Robert De Niro, Samuel L. Jackson, Ray Liotta, Joe Pesci, Tobin Bell, Michael Imperioli, Lorraine Bracco, Debi Mazar, Paul Sorvino, Melissa Prophet, Frank DiLeo, Mike Starr, Clem Caserta, Tony Darrow, Frank Vincent, Frank Sivero, Illeana Douglas, Chuck Low"/>
+                    <TextBlock TextWrapping="Wrap" Text="Trailer" FontSize="21.333" FontWeight="Bold" Foreground="#FFCF5555" Margin="0,20,0,0"/>
+                    <TextBlock TextWrapping="Wrap" Text="Link al Trailar "/>
+
+                </ListBox>
+            </controls:PivotItem>
+        </controls:Pivot>
+    </Grid>
+
+</phone:PhoneApplicationPage>
